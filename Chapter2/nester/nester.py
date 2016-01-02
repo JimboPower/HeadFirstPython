@@ -8,4 +8,3 @@ def print_lol(the_list):
         else:
             print(item)
             
-
