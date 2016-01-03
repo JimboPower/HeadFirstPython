@@ -1,9 +1,10 @@
 data = open('sketch.txt')
 
-data.seek(0)
+for each_line in data:
+    if not each_line.find(':') == -1:
+        (role, line_spoken) = each_line.split(':', 1)
+        print(role, end='')
+        print(' said ', end='')
+        print(line_spoken, end='')
 
-for line in data:
-    (role, line_spoken) = line.split(':', 1)
-    print(role, end='')
-    print(' said: ', end='')
-    print(line_spoken, end='')
+data.close()
