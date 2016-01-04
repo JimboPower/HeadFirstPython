@@ -1,6 +1,6 @@
-import os
 
-if os.path.exists('ds.txt'):
+
+try:
     data = open('sketch.txt')
     for each_line in data:
         try:
@@ -8,8 +8,9 @@ if os.path.exists('ds.txt'):
             print(role, end='')
             print(' said ', end='')
             print(line_spoken, end='')
-        except:
+        except ValueError:
             pass  
     data.close()
-else:
+except IOError:
+
     print('The data file is missing!')
