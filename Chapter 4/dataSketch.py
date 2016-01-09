@@ -19,19 +19,9 @@ except IOError:
     print('The data file is missing!')
 
 try:
-    man_file = open("man_data.txt", "w")
-    other_file = open("other_data.txt", "w")
+     with open("man_data.txt", "w") as man_file, open("other_data.txt", "w") as other_file:
+        print(man, file=man_file)
+        print(other, file=other_file) 
+except IOError as error:
+    print('File error.' , + str(error))
 
-    print(man, file=man_file)
-    print(other, file=other_file)
-    print("ciao gigi mi chiamo edo e tu??", file=other_file)
-    for num in range(10000000):
-        print(num, file=other_file)
-    
-    
-except IOError:
-    print('File error.')
-finally:
-
-    man_file.close()
-    other_file.close()
