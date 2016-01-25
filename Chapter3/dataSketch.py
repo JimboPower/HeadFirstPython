@@ -12,5 +12,4 @@ try:
             pass  
     data.close()
 except IOError:
-
     print('The data file is missing!')
