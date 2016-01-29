@@ -15,9 +15,10 @@ with open('sarah.txt') as saf:
 sarah = data.strip().split(',')
 
 
-print(sorted(james))
-print(sorted(julie))
-print(sorted(mikey))
-print(sorted(sarah))
+clean_james = []
+clean_julie = []
+clean_mikey = []
+clean_sarah = []
 
-
+for each_time in james: """each time is 
+    
