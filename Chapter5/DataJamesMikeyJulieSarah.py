@@ -1,3 +1,13 @@
+def sanitize(time_string):
+    if '-' in time_string:
+        splitter = '-'
+    elif ':' in time_string:
+        splitter = ':'
+    else:
+        return(time_string)
+    (mins, secs) = time_string.split(splitter)
+    return(mins + '.' + secs)
+
 with open('james.txt') as jaf:
     data = jaf.readline()
 james = data.strip().split(',')
@@ -20,5 +30,7 @@ clean_julie = []
 clean_mikey = []
 clean_sarah = []
 
-for each_time in james: """each time is 
-    
+for each_time in james:
+    clean_james.append(sanitize(each_time))
+
+
