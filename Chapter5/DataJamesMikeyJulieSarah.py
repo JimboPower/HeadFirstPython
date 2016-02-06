@@ -30,8 +30,7 @@ clean_julie = []
 clean_mikey = []
 clean_sarah = []
 
-for each_time in james:
-    clean_james.append(sanitize(each_time))
+clean_james = [for each_time in james sanitize(each_time) ]
 for each_time in julie:
     clean_julie.append(sanitize(each_time))
 for each_time in mikey:
@@ -44,4 +43,13 @@ print(sorted(clean_james))
 print(sorted(clean_julie))
 print(sorted(clean_mikey))
 print(sorted(clean_sarah))
+
+"""Reverse these number"""
+numbers = ['3', '1', '7', '9']
+numbers.sort(reverse=True)
+print(numbers)
+
+
+
+
 
