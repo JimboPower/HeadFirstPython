@@ -32,5 +32,16 @@ clean_sarah = []
 
 for each_time in james:
     clean_james.append(sanitize(each_time))
+for each_time in julie:
+    clean_julie.append(sanitize(each_time))
+for each_time in mikey:
+    clean_mikey.append(sanitize(each_time))
+for each_time in sarah:
+    clean_sarah.append(sanitize(each_time))
 
+
+print(sorted(clean_james))
+print(sorted(clean_julie))
+print(sorted(clean_mikey))
+print(sorted(clean_sarah))
 
