@@ -24,29 +24,29 @@ with open('sarah.txt') as saf:
     data = saf.readline()
 sarah = data.strip().split(',')
 
+print(sorted(sanitize(each_t) for each_t in james))
+print(sorted(sanitize(each_t) for each_t in julie))
+print(sorted(sanitize(each_t) for each_t in mikey))
+print(sorted(sanitize(each_t) for each_t in sarah))
 
-clean_james = []
-clean_julie = []
-clean_mikey = []
-clean_sarah = []
+ciao = james[0:3]
 
-clean_james = [for each_time in james sanitize(each_time) ]
-for each_time in julie:
-    clean_julie.append(sanitize(each_time))
-for each_time in mikey:
-    clean_mikey.append(sanitize(each_time))
-for each_time in sarah:
-    clean_sarah.append(sanitize(each_time))
+print(ciao)
+
+print(james[0:5])
 
 
-print(sorted(clean_james))
-print(sorted(clean_julie))
-print(sorted(clean_mikey))
-print(sorted(clean_sarah))
+unique_james = []
+
+for each_t in james:
+    if each_t not in unique_james:
+        unique_james.append(each_t)
+
+print(unique_james[0:3])
 
 """Reverse these number"""
 numbers = ['3', '1', '7', '9']
-numbers.sort(reverse=True)
+numbers.sort(reverse=False)
 print(numbers)
 
 
