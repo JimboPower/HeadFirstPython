@@ -24,32 +24,33 @@ with open('sarah.txt') as saf:
     data = saf.readline()
 sarah = data.strip().split(',')
 
-print(sorted(sanitize(each_t) for each_t in james))
-print(sorted(sanitize(each_t) for each_t in julie))
-print(sorted(sanitize(each_t) for each_t in mikey))
-print(sorted(sanitize(each_t) for each_t in sarah))
-
-ciao = james[0:3]
-
-print(ciao)
-
-print(james[0:5])
-
+james = sorted([sanitize(each_t) for each_t in james])
+julie = sorted([sanitize(each_t) for each_t in julie])
+mikey = sorted([sanitize(each_t) for each_t in mikey])
+sarah = sorted([sanitize(each_t) for each_t in sarah])
 
 unique_james = []
+unique_julie = []
+unique_mikey = []
+unique_sarah = []
 
 for each_t in james:
     if each_t not in unique_james:
         unique_james.append(each_t)
 
+for each_t in julie:
+    if each_t not in unique_julie:
+        unique_julie.append(each_t)
+    
+for each_t in mikey:
+    if each_t not in unique_mikey:
+        unique_mikey.append(each_t)
+
+for each_t in sarah:
+    if each_t not in unique_sarah:
+        unique_sarah.append(each_t)
+
 print(unique_james[0:3])
-
-"""Reverse these number"""
-numbers = ['3', '1', '7', '9']
-numbers.sort(reverse=False)
-print(numbers)
-
-
-
-
-
+print(unique_julie[0:3])
+print(unique_mikey[0:3])
+print(unique_sarah[0:3])
