@@ -8,6 +8,15 @@ def sanitize(time_string):
     (mins, secs) = time_string.split(splitter)
     return(mins + '.' + secs)
 
+def coach_data(file_name):
+    try:       
+        with open(filename) as coach_file:
+            word = coach_file.readline()
+            return(word.split(','))
+    except IOError as ioerr:
+               print("Files Error!!" + str(ioerr))
+               return(None)
+
 with open('james.txt') as jaf:
     data = jaf.readline()
 james = data.strip().split(',')
@@ -24,12 +33,18 @@ with open('sarah.txt') as saf:
     data = saf.readline()
 sarah = data.strip().split(',')
 
-james = sorted([sanitize(each_t) for each_t in james])
-julie = sorted([sanitize(each_t) for each_t in julie])
-mikey = sorted([sanitize(each_t) for each_t in mikey])
+
+james = coach_data('james.txt')
+sarah = coach_data('sarah.txt')
+mikey = coach_data('mikey.txt')
+julie = coach_data('julie.txt')
+
+james = sorted([sanitize(each_t) for each_t in james] [0:3])
+julie = sorted([sanitize(each_t) for each_t in julie] [0:3])
+mikey = sorted([sanitize(each_t) for each_t in mikey] [0:3])
 sarah = sorted([sanitize(each_t) for each_t in sarah])
 
-unique_james = []
+unique_james = []              
 unique_julie = []
 unique_mikey = []
 unique_sarah = []
@@ -40,7 +55,7 @@ for each_t in james:
 
 for each_t in julie:
     if each_t not in unique_julie:
-        unique_julie.append(each_t)
+        unique_julie.append(eachy_t)
     
 for each_t in mikey:
     if each_t not in unique_mikey:
