@@ -5,6 +5,7 @@ def sanitize(time_string):
         splitter = ':'
     else:
         return(time_string)
+<<<<<<< Updated upstream
     (mins, secs) = time_string.split(splitter)
     return(mins + '.' + secs)
 
@@ -17,6 +18,12 @@ def coach_data(file_name):
                print("Files Error!!" + str(ioerr))
                return(None)
 
+=======
+
+    (mins, secs) = time_string.split(splitter)
+    return(mins + '.' + secs)
+
+>>>>>>> Stashed changes
 with open('james.txt') as jaf:
     data = jaf.readline()
 james = data.strip().split(',')
@@ -34,6 +41,7 @@ with open('sarah.txt') as saf:
 sarah = data.strip().split(',')
 
 
+<<<<<<< Updated upstream
 james = coach_data('james.txt')
 sarah = coach_data('sarah.txt')
 mikey = coach_data('mikey.txt')
@@ -69,3 +77,6 @@ print(unique_james[0:3])
 print(unique_julie[0:3])
 print(unique_mikey[0:3])
 print(unique_sarah[0:3])
+=======
+print(james[1])
+>>>>>>> Stashed changes

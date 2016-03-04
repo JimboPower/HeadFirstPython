@@ -1,6 +1,8 @@
 """This scode prints on the shell the items of the list,
 if there is nested item"""
 
+family = ["Edoardo", "Cesare", "Giulia", "Ettore"]
+
 def print_lol(the_list, level=0):
     for each_item in the_list:
         if isinstance(each_item, list):
@@ -13,5 +15,3 @@ def print_lol(the_list, level=0):
             for tab in range(level):
                 print("\t", end='')
             print(each_item)
-            
-print_lol(movie, 0)
